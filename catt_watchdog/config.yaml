@@ -1,1 +1,29 @@
+name: CATT Watchdog
+version: "1.0.0"
+slug: catt_watchdog
+description: >-
+  Watchdog CATT pour maintenir un dashboard Home Assistant
+  affiché sur un Google Nest Hub.
 
+url: https://github.com/skorokithakis/catt
+
+arch:
+  - aarch64
+
+startup: application
+boot: auto
+init: false
+
+host_network: true
+
+options:
+  nest_hub: "Nest Hub"
+  dashboard_url: "https://ha.barnesfamily.ovh/nest-hub/accueil"
+  interval: 300
+
+schema:
+  nest_hub: str
+  dashboard_url: url
+  interval: int
+
+panel_icon: mdi:cast-connected
